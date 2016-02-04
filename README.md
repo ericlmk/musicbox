@@ -1,5 +1,5 @@
 # Music Box (Demo)
-This is a demo application with using Node.js and MongoDB in Docker. Some RESTful services are provided.
+This is a demo application with using Node.js and MongoDB in one Docker container. Some RESTful services are provided.
 
 ## Getting started
 
