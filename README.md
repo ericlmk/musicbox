@@ -14,6 +14,8 @@ This is a demo application with using Node.js and MongoDB in one Docker containe
     * [2. Search for Artist](#2-search-for-artist)
 * [Technical Detail](#technical-detail)
 
+==================================================
+
 ### Requirement
 * [Docker](http://www.docker.com)
 * [NodeJs](http://nodejs.org)
