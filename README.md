@@ -18,7 +18,7 @@ This is a demo application with using Node.js and MongoDB in one Docker containe
 
 ### Requirement
 * [Docker](http://www.docker.com)
-* [NodeJs](http://nodejs.org)
+* [Node.js](http://nodejs.org)
 * [MongoDB](http://mongodb.org)
 
 ==================================================
