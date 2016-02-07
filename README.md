@@ -1,6 +1,17 @@
 # Music Box
 This is a demo application with using Node.js and MongoDB in one Docker container. Some RESTful services are provided.
 
+Table of contents
+=================
+* [Table of contents](#table-of-contents)
+* [Requirement](#requirement)
+* [Installation](#installation)
+* [RESTful Interface](#restful-interface)
+    * [CRUD for Artist](#crud-for-artist)
+    * [Search for Artist](#search-for-artist)
+* [Technical Detail](#technical-detail)
+* 
+
 ## Getting started
 
 ### Requirement
@@ -26,6 +37,8 @@ To run the Docker image, run:
 And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
 
 ### RESTful Interface
+
+#### CRUD for Artist
 
 **URL:**
 
@@ -70,6 +83,13 @@ And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
         "__v": 0
       }
     }
+
+#### Search for Artist
+
+**URL:**
+
+    http://192.168.99.100:3000/service/artists/search/<FIELD>/<VALUE>
+    http://192.168.99.100:3000/service/artists/search/name/kelly
 
 ### Technical Detail
 
