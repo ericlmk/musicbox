@@ -1,4 +1,4 @@
-# Music Box (Demo)
+# Music Box
 This is a demo application with using Node.js and MongoDB in one Docker container. Some RESTful services are provided.
 
 ## Getting started
@@ -10,6 +10,10 @@ This is a demo application with using Node.js and MongoDB in one Docker containe
 
 
 ### Installation
+
+To download source code from GitHub, run:
+
+    git clone https://github.com/ericlmk/musicbox.git
 
 To build the Docker image, run:
 

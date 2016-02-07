@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	hr
+	div(class='div-title')= '<Artist List>'
+	table
+		tr
+			th ID
+			th Name
+			th Street
+			th PO Box
+			th City
+			th State/Province
+			th Country
+			th Zip
+			th Email
+			th Instruments
+		each artist, index in artists
+			tr
+				td= artist._id 
+				td= artist.name
+				td= artist.street
+				td= artist.pobox
+				td= artist.city
+				td= artist.stateProvince
+				td= artist.country
+				td= artist.zip
+				td= artist.email
+				td= artist.instruments
+				
