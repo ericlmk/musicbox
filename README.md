@@ -23,11 +23,53 @@ To run the Docker image, run:
 
     docker run -d -p 3000:3000 --name musicbox ericlmk/musicbox
 
-And then, visit [http://localhost:3000/](http://localhost:3000/)
+And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
 
 ### RESTful Interface
 
-To be provided
+**URL:**
+
+    http://192.168.99.100:3000/service/artists/<ID>
+    http://192.168.99.100:3000/service/artists/1
+
+| CRUD    | HTTP Operation  |
+| ------- | --------------- |
+| Create  | POST            |
+| Read    | GET             |
+| Update  | PUT             |
+| Delete  | DELETE          |
+
+**Sample Data for POST/PUT (x-www-form-urlencoded):**
+
+| Field Name    | Value                                                |
+| ------------- | ---------------------------------------------------- |
+| name          | Kelly Chen                                           |
+| street        | centered                                             |
+| pobox         |  P.O. Box 98820 Tsim Sha Tsui Post Office, Hong Kong |
+| city          | Hong Kong                                            |
+| stateProvince | N/A                                                  |
+| country       | Hong Kong                                            |
+| zip           | 852                                                  |
+| email         | kcifc@biznetvigator.com                              |
+| instruments   | Piano                                                |
+
+**Sample Result for GET:**
+
+    {
+      "result": {
+        "_id": 1,
+        "name": "Kelly Chen",
+        "street": "N/A",
+        "pobox": "P.O. Box 98820 Tsim Sha Tsui Post Office, Hong Kong",
+        "city": "Hong Kong",
+        "stateProvince": "N/A",
+        "country": "China",
+        "zip": "852",
+        "email": "kcifc@biznetvigator.com",
+        "instruments": "Piano",
+        "__v": 0
+      }
+    }
 
 ### Technical Detail
 
