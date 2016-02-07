@@ -1,18 +1,18 @@
 # Music Box
 This is a demo application with using Node.js and MongoDB in one Docker container. Some RESTful services are provided.
 
-Table of contents
-=================
-* [Table of contents](#table-of-contents)
+
+
+## Getting started
+
+### Table of contents
+
 * [Requirement](#requirement)
 * [Installation](#installation)
 * [RESTful Interface](#restful-interface)
     * [1. CRUD for Artist](#1-crud-for-artist)
     * [2. Search for Artist](#2-search-for-artist)
 * [Technical Detail](#technical-detail)
-* 
-
-## Getting started
 
 ### Requirement
 * [Docker](http://www.docker.com)
