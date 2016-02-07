@@ -7,8 +7,8 @@ Table of contents
 * [Requirement](#requirement)
 * [Installation](#installation)
 * [RESTful Interface](#restful-interface)
-    * [CRUD for Artist](#crud-for-artist)
-    * [Search for Artist](#search-for-artist)
+    * [1. CRUD for Artist](#1-crud-for-artist)
+    * [2. Search for Artist](#2-search-for-artist)
 * [Technical Detail](#technical-detail)
 * 
 
@@ -19,6 +19,7 @@ Table of contents
 * [NodeJs](http://nodejs.org)
 * [MongoDB](http://mongodb.org)
 
+==================================================
 
 ### Installation
 
@@ -36,9 +37,11 @@ To run the Docker image, run:
 
 And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
 
+==================================================
+
 ### RESTful Interface
 
-#### CRUD for Artist
+#### 1. CRUD for Artist
 
 **URL:**
 
@@ -84,12 +87,14 @@ And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
       }
     }
 
-#### Search for Artist
+#### 2. Search for Artist
 
 **URL:**
 
     http://192.168.99.100:3000/service/artists/search/<FIELD>/<VALUE>
     http://192.168.99.100:3000/service/artists/search/name/kelly
+
+==================================================
 
 ### Technical Detail
 
