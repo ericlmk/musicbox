@@ -62,8 +62,8 @@ And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
 | Field Name    | Value                                                |
 | ------------- | ---------------------------------------------------- |
 | name          | Kelly Chen                                           |
-| street        | centered                                             |
-| pobox         |  P.O. Box 98820 Tsim Sha Tsui Post Office, Hong Kong |
+| street        | N/A                                                  |
+| pobox         | P.O. Box 98820 Tsim Sha Tsui Post Office, Hong Kong  |
 | city          | Hong Kong                                            |
 | stateProvince | N/A                                                  |
 | country       | Hong Kong                                            |
