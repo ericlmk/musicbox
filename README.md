@@ -103,7 +103,7 @@ The docker image can be deployed and run on IBM Bluemix platform.
 
 Prerequisite: You have already installed Docker in your local machine
 
-1. Install Cloud Foundry CLI and IBM Containers plug-in
+Install Cloud Foundry CLI and IBM Containers plug-in
 ```
 https://www.ng.bluemix.net/docs/containers/container_cli_cfic.html
 ```
@@ -163,8 +163,7 @@ To bind the external IP to your docker runtime, run:
 cf ic ip bind <EXTERNAL_IP> musicbox
 ```
 
-And then, visit http://<EXTERNAL_IP>:3000/
-
+And then, visit http://< EXTERNAL_IP >:3000/
 
 ==================================================
 
