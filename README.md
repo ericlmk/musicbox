@@ -10,8 +10,9 @@ This is a demo application with using Node.js and MongoDB in one Docker containe
 * [Requirement](#requirement)
 * [Installation](#installation)
 * [RESTful Interface](#restful-interface)
-    * [1. CRUD for Artist](#1-crud-for-artist)
-    * [2. Search for Artist](#2-search-for-artist)
+   * [1. CRUD for Artist](#1-crud-for-artist)
+   * [2. Search for Artist](#2-search-for-artist)
+* [IBM Bluemix](#ibm-bluemix)
 * [Technical Detail](#technical-detail)
 
 ==================================================
@@ -96,6 +97,23 @@ And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
     http://192.168.99.100:3000/service/artists/search/<FIELD>/<VALUE>
     http://192.168.99.100:3000/service/artists/search/name/kelly
 
+==================================================
+
+### IBM Bluemix
+
+The sample docker image can be deployed on IBM Bluemix platform.
+
+1. Install the Cloud Foundry CLI & IBM Containers plug-in
+https://www.ng.bluemix.net/docs/containers/container_cli_cfic.html
+
+2. Login to IBM Bluemix via CF CLI (for US South)
+```
+cf login -a api.ng.bluemix.net
+```
+2. Login to IBM Bluemix via CF CLI (for US South)
+```
+cf ic login
+```
 ==================================================
 
 ### Technical Detail
