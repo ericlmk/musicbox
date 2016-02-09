@@ -116,7 +116,7 @@ cf login -a api.ng.bluemix.net
 
 To set container namespace (Set ONCE only), run:
 
-Remark: The namespace can't be changed later.
+*Remark: The namespace can't be changed later*
 
 ```
 cf ic namespace set <NAMESPACE_NAME>
@@ -129,7 +129,7 @@ cf ic login
 
 To set Docker local environment (for Windows), run:
 
-Remark: Your own script will be displayed in command prompt after log in to IBM Containers service 
+*Remark: Your own script will be displayed in command prompt after log in to IBM Containers service*
 
 ```
 (Sample Only)
