@@ -108,24 +108,29 @@ Prerequisite: You have already installed Docker in your local machine
 https://www.ng.bluemix.net/docs/containers/container_cli_cfic.html
 ```
 
-1. To log in to IBM Bluemix (US South), run:
+To log in to IBM Bluemix (US South), run:
+
 ```
 cf login -a api.ng.bluemix.net
 ```
 
-2. To set container namespace (Set ONCE only), run:
-Reminder: The namespace can't be changed later.
+To set container namespace (Set ONCE only), run:
+
+Remark: The namespace can't be changed later.
+
 ```
 cf ic namespace set <NAMESPACE_NAME>
 ```
 
-3. To log in to IBM Containers service, run:
+To log in to IBM Containers service, run:
 ```
 cf ic login
 ```
 
-4. To set Docker local environment (for Windows), run:
-Your own script will be displayed in command prompt after log in to IBM Containers service 
+To set Docker local environment (for Windows), run:
+
+Remark: Your own script will be displayed in command prompt after log in to IBM Containers service 
+
 ```
 (Sample Only)
 set DOCKER_HOST=tcp://containers-api.ng.bluemix.net:8443
@@ -133,27 +138,27 @@ set DOCKER_CERT_PATH=C:\Users\ericlmk\.ice\certs\containers-api.ng.bluemix.net\x
 set DOCKER_TLS_VERIFY=1
 ```
 
-5. To build the Docker image, run:
+To build the Docker image, run:
 ```
 docker build -t musicbox .
 ```
 
-6. To push your Docker image to IBM Bluemix registry, run:
+To push your Docker image to IBM Bluemix registry, run:
 ```
 docker push registry.ng.bluemix.net/<NAMESPACE_NAME>/musicbox
 ```
 
-7. To run the Docker image, run:
+To run the Docker image, run:
 ```
 cf ic run --name musicbox registry.ng.bluemix.net/<NAMESPACE_NAME>/musicbox
 ```
 
-8. To request an external IP, run:
+To request an external IP, run:
 ```
 cf ic ip request
 ```
 
-9. To bind the external IP to your docker runtime, run:
+To bind the external IP to your docker runtime, run:
 ```
 cf ic ip bind <EXTERNAL_IP> musicbox
 ```
