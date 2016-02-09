@@ -1,8 +1,6 @@
 # Music Box
 This is a demo application with using Node.js and MongoDB in one Docker container. Some RESTful services are provided.
 
-
-
 ## Getting started
 
 ### Table of contents
@@ -10,8 +8,8 @@ This is a demo application with using Node.js and MongoDB in one Docker containe
 * [Requirement](#requirement)
 * [Installation](#installation)
 * [RESTful Interface](#restful-interface)
-   * [1. CRUD for Artist](#1-crud-for-artist)
-   * [2. Search for Artist](#2-search-for-artist)
+    * [1. CRUD for Artist](#1-crud-for-artist)
+    * [2. Search for Artist](#2-search-for-artist)
 * [IBM Bluemix](#ibm-bluemix)
 * [Technical Detail](#technical-detail)
 
@@ -101,19 +99,68 @@ And then, visit [http://192.168.99.100:3000/](http://192.168.99.100:3000/)
 
 ### IBM Bluemix
 
-The sample docker image can be deployed on IBM Bluemix platform.
+The docker image can be deployed and run on IBM Bluemix platform.
 
-1. Install the Cloud Foundry CLI & IBM Containers plug-in
+Prerequisite: You have already installed Docker in your local machine
+
+1. Install Cloud Foundry CLI and IBM Containers plug-in
+```
 https://www.ng.bluemix.net/docs/containers/container_cli_cfic.html
+```
 
-2. Login to IBM Bluemix via CF CLI (for US South)
+1. To log in to IBM Bluemix (US South), run:
 ```
 cf login -a api.ng.bluemix.net
 ```
-2. Login to IBM Bluemix via CF CLI (for US South)
+
+2. To set container namespace (Set ONCE only), run:
+Reminder: The namespace can't be changed later.
+```
+cf ic namespace set <NAMESPACE_NAME>
+```
+
+3. To log in to IBM Containers service, run:
 ```
 cf ic login
 ```
+
+4. To set Docker local environment (for Windows), run:
+Your own script will be displayed in command prompt after log in to IBM Containers service 
+```
+(Sample Only)
+set DOCKER_HOST=tcp://containers-api.ng.bluemix.net:8443
+set DOCKER_CERT_PATH=C:\Users\ericlmk\.ice\certs\containers-api.ng.bluemix.net\xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+set DOCKER_TLS_VERIFY=1
+```
+
+5. To build the Docker image, run:
+```
+docker build -t musicbox .
+```
+
+6. To push your Docker image to IBM Bluemix registry, run:
+```
+docker push registry.ng.bluemix.net/<NAMESPACE_NAME>/musicbox
+```
+
+7. To run the Docker image, run:
+```
+cf ic run --name musicbox registry.ng.bluemix.net/<NAMESPACE_NAME>/musicbox
+```
+
+8. To request an external IP, run:
+```
+cf ic ip request
+```
+
+9. To bind the external IP to your docker runtime, run:
+```
+cf ic ip bind <EXTERNAL_IP> musicbox
+```
+
+And then, visit http://<EXTERNAL_IP>:3000/
+
+
 ==================================================
 
 ### Technical Detail
